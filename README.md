@@ -96,7 +96,9 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 
 **Push & Pop**
 
-Bu iki işlem birbirlerinin tam olarak tersidir. Push, programdan gelen bir değeri stack’in üzerine eklerken, pop is en yüksek değeri stack’ten çıkarır, boşaltır.
+▶︎ Bu iki işlem birbirlerinin tam olarak tersidir. Push, programdan gelen bir değeri stack’in üzerine eklerken, pop is en yüksek değeri stack’ten çıkarır, boşaltır.
+
+▶︎ Pointer, fonksiyon döndükten sonra, stack üzerinde herhangi bir kontrole sahip değildir. Bu nedenle compiler, bilgileri stackten boşaltır (pop operasyonu) ve gerektiği gibi kullanır. Fakat fonksiyondan döndükten sonra, dizinin içeriğini doldurmaya çalıştığımızda bellek bozulur (memory corruption) ve mis gibi bir “segfault” yeriz.
 
 <img width="977" alt="Ekran Resmi 2023-11-23 17 06 25" src="https://github.com/facetint/get_next_line/assets/99668549/5a18b55c-6a78-4d66-9ec8-d116763c6d96">
 
@@ -112,19 +114,45 @@ Bu iki işlem birbirlerinin tam olarak tersidir. Push, programdan gelen bir değ
 ▶︎ Heap’teki bellek kullanımı compiler tarafından değil, geliştiriciler tarafından kontrol edilir. Karmaşık programlar oluştururken, genellikle büyük bir bellek alanına ihtiyaç duyarız. Bu durumda Heap Memory kullanırız.
 
 ▶︎ Heap üzerinde allocate ettiğimiz bellek operasyonuna “dynamic memory allocation” adı verilir.
+
+
+## HEAP BELLEK AVANTAJLARI
+
+▶︎  Heap'in bellek boyutunda herhangi bir sınırı yoktur.
+
+▶︎  Değişkenlere global olarak erişmenizi sağlar.
+
+▶︎  Çöp toplama, nesnenin kullandığı belleği boşaltmak için yığın belleğinde çalışır.
+
+▶︎  Öncelik Kuyruğunda da yığın yöntemi kullanılır.
+
+
+## HEAP BELLEK DEZAVANTAJLARI
+
+▶︎  Stack ile karşılaştırıldığında yürütülmesi çok fazla zaman alır.
+
+▶︎  Hesaplamak daha fazla zaman alır.
+
+▶︎  Bir işletim sisteminin sağlayabileceği maksimum belleği sağlayabilir.
+
+▶︎  Heap belleğinde bellek yönetimi küresel olarak kullanıldığından daha karmaşıktır.
+
   
 ## STACK - HEAP FARKLARI
-| STACK | HEAP|
+| PARAMETRE | STACK | HEAP|
 | :--- | :--- |
-| Kullanımı kolaydır. | Kullanımı stack e göre daha karmaşık olabilir. |
-| Bilgisayarda RAM’de tutulur. | Bilgisayarda RAM’de tutulur. |
-| Oluşturulan değişkenler stack kapsamından çıkınca otomatik olarak yok edilir. | Bir blok içerisinde oluşturulan heap değişkenler, bloğun dışına çıktığında otomatik olarak yok edilemez, bunun manuel olarak yapılması gerekir. |
-| Ulaşılması heap‘e göre daha hızlıdır. | Stack ile karşılaştırıldığında oldukça yavaştır. |
-| Stack üzerinde kullanım fazla olduğunda alan yeterli olmayabilir.| Doğru kullanılmaması durumunda bellek sorunları yaratır. |
-| Oluşturulan değişkenler pointer olmadan kullanılabilir. | Değişkenler pointer ile kullanılır. |
-| Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
-| Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır. | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
-
+| Temel | | Bellek bitişik bir blok halinde tahsis edilir. | Bellek herhangi bir rastgele sırayla tahsis edilir. |
+| Bellek Tahsisi | | Derleyici tarafından otomatik olarak yapılır. | Programcı tarafından yapılır. |
+| Maliyet || az | daha fazla |
+| Uygulama || Kolay. | Daha zor. |
+| Erişim süresi || Ulaşılması daha hızlıdır.| Daha zordur. |
+| Ana Konu || Bellek yetersizliği | Bellek parçalanması |
+| Referans yeri | | Harika | Çalışma zamanında oluşturulur. |
+| Güvenlik || Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır. | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
+| Esneklik || Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
+| Veri türü yapısı || Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
+| Tercih Edilen || Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
+| Boyut || Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
 
 
 
