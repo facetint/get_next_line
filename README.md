@@ -141,18 +141,18 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 ## STACK - HEAP FARKLARI
 | PARAMETRE | STACK | HEAP |
 | :--- | :--- | :--- |
-| Temel | Bellek bitişik bir blok halinde tahsis edilir. | || Bellek herhangi bir rastgele sırayla tahsis edilir. | |
-| Bellek Tahsisi | | Derleyici tarafından otomatik olarak yapılır.| | Programcı tarafından yapılır. |
-| Maliyet | | az | | daha fazla |
-| Uygulama || Kolay. | Daha zor. |
-| Erişim süresi || Ulaşılması daha hızlıdır. | | Daha zordur. |
-| Ana Konu || Bellek yetersizliği | | Bellek parçalanması |
-| Referans yeri | | Harika | | Çalışma zamanında oluşturulur. |
-| Güvenlik || Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır.| | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
-| Esneklik || Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
-| Veri türü yapısı || Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
-| Tercih Edilen || Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
-| Boyut || Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
+| Temel | Bellek bitişik bir blok halinde tahsis edilir. | | Bellek herhangi bir rastgele sırayla tahsis edilir. | |
+| Bellek Tahsisi | Derleyici tarafından otomatik olarak yapılır.| | Programcı tarafından yapılır. |
+| Maliyet | az | | daha fazla |
+| Uygulama | Kolay. | Daha zor. |
+| Erişim süresi | Ulaşılması daha hızlıdır. | | Daha zordur. |
+| Ana Konu | Bellek yetersizliği | | Bellek parçalanması |
+| Referans yeri | Harika | | Çalışma zamanında oluşturulur. |
+| Güvenlik | Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır.| | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
+| Esneklik | Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
+| Veri türü yapısı | Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
+| Tercih Edilen | Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
+| Boyut | Derleme zamanında oluşturulur. | | Çalışma zamanında oluşturulur. |
 
 
 
