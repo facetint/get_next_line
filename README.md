@@ -143,7 +143,7 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 | :--- | :--- | :--- |
 | Temel | Bellek bitişik bir blok halinde tahsis edilir. | Bellek herhangi bir rastgele sırayla tahsis edilir. |
 | Bellek Tahsisi | Derleyici tarafından otomatik olarak yapılır.| Programcı tarafından yapılır. |
-| Maliyet | az | daha fazla |
+| Maliyet | Az | Daha fazla |
 | Uygulama | Kolay. | Daha zor. |
 | Erişim süresi | Ulaşılması daha hızlıdır. | Daha zordur. |
 | Ana Konu | Bellek yetersizliği | Bellek parçalanması |
