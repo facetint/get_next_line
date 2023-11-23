@@ -48,13 +48,15 @@ C programlama dilinde ve Unix benzeri işletim sistemlerinde kullanılan bir sis
 
 <img width="579" alt="Ekran Resmi 2023-11-23 14 48 37" src="https://github.com/facetint/get_next_line/assets/99668549/0ded8caf-2865-410e-aa75-02bf512f516a">
 
-**fd :   Veriyi okuyacağınız dosya veya dosya tanımlayıcısının (file descriptor) numarasıdır. Dosya tanımlayıcısı, dosyaya veya diğer veri kaynaklarına erişim sağlar.**
+**`read`** fonksiyonunun işlevi şu şekildedir:
 
-**buf :  Okunan verinin saklanacağı bellek alanını gösteren bir işaretçidir. `read` fonksiyonu, okunan veriyi bu bellek alanına kopyalar.**
+1. **`fd`** ile belirtilen dosya veya dosya tanımlayıcısından, **`count`** ile belirtilen kadar veri okur.
 
-**count :  Okunacak verinin maksimum boyutunu belirten bir tamsayıdır. `count`, `buf` işaretçisinin gösterdiği bellek alanının boyutunu aşmamalıdır.**
+2. Okunan veriyi **`buf`** işaretçisinin gösterdiği bellek alanına kopyalar.
 
-**ssize_t :  POSIX standardına (Portable Operating System Interface for Unix) dayalı işletim sistemlerinde kullanılan bir tamsayı (integer) veri türüdür. Bu veri türü, özellikle dosya işleme işlemleri sırasında kullanılır ve işlem sonuçlarını temsil etmek için tasarlanmıştır.**
+3. Okunan verinin boyutunu döndürür. Başarılı bir okuma işlemi gerçekleştirilirse, dönüş değeri okunan bayt sayısını temsil eder. Eğer dosya sonuna ulaşıldıysa, 0 döner. Bir hata meydana geldiyse, -1 döner ve **`errno`** değişkenine hata kodu atanır.
+
+ssize_t :  POSIX standardına (Portable Operating System Interface for Unix) dayalı işletim sistemlerinde kullanılan bir tamsayı (integer) veri türüdür. Bu veri türü, özellikle dosya işleme işlemleri sırasında kullanılır ve işlem sonuçlarını temsil etmek için tasarlanmıştır.
 
 **`ssize_t`** veri türünün temel özellikleri:
 
@@ -71,4 +73,26 @@ C programlama dilinde ve Unix benzeri işletim sistemlerinde kullanılan bir sis
 - **`size_t`**: **`size_t`**, özellikle bellek tahsis etme (malloc, calloc vb.) ve bellek boyutlarını temsil etme işlemleri için kullanılır. Pozitif tamsayı değerlerini temsil eder ve genellikle bellek ile ilgili işlemlerde boyutları ifade etmek için kullanılır. Bu tür, dizilerin veya bellek bloklarının boyutlarını ve indislerini saklamak için idealdir.
 
 - **`ssize_t`**: **`ssize_t`**, dosya okuma ve yazma işlemlerinin sonuçlarını temsil etmek için kullanılır. Hem pozitif hem de negatif tamsayı değerlerini temsil edebilir ve genellikle dosya işleme işlemlerinin sonuçlarını saklamak için kullanılır. Bu tür, **`read`** ve **`write`** işlemleri gibi dosya işleme işlemlerinin sonuçlarını döndürmek için idealdir.
+
+## BELLEK YÖNETİMİ
+
+STACK - HEAP
+
+<img width="701" alt="Ekran Resmi 2023-11-23 14 58 41" src="https://github.com/facetint/get_next_line/assets/99668549/d4eba745-73aa-486d-b8f8-ba8484121b3f">
+
+
+## STACK - HEAP FARKLARI
+| STACK | HEAP|
+| :--- | :--- |
+| Kullanımı kolaydır. | Kullanımı stack e göre daha karmaşık olabilir. |
+| Bilgisayarda RAM’de tutulur. | Bilgisayarda RAM’de tutulur. |
+| Oluşturulan değişkenler stack kapsamından çıkınca otomatik olarak yok edilir. | Bir blok içerisinde oluşturulan heap değişkenler, bloğun dışına çıktığında otomatik olarak yok edilemez, bunun manuel olarak yapılması gerekir. |
+| Ulaşılması heap‘e göre daha hızlıdır. | Stack ile karşılaştırıldığında oldukça yavaştır. |
+| Stack üzerinde kullanım fazla olduğunda alan yeterli olmayabilir.| Doğru kullanılmaması durumunda bellek sorunları yaratır. |
+| Oluşturulan değişkenler pointer olmadan kullanılabilir. | Değişkenler pointer ile kullanılır. |
+| Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
+| Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır. | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
+
+
+
 
