@@ -80,7 +80,39 @@ STACK - HEAP
 
 <img width="701" alt="Ekran Resmi 2023-11-23 14 58 41" src="https://github.com/facetint/get_next_line/assets/99668549/d4eba745-73aa-486d-b8f8-ba8484121b3f">
 
+## STACK 
 
+▶︎ Stack Memory, işlemcilerin register bilgilerinin tutulduğu yerdir. Burada programınızla ilgili bilgiler (örneğin; lokal değişkenler, referans değişkenler vs) yer almaktadır. Bu memory, geliştirici tarafından değil, compiler tarafından yönetilir. Stack’teki bilgiler kodunuzun derleme aşamasında, direk bellek içine yerleştirildiği için erişimi oldukça hızlıdır.
+
+▶︎  Biz geliştiriciler için çok önemli olmasa da, programımız işlemci üzerinde çalışabilmek için sürekli stack belleğini arar. Her lokal değişken ve çağrılan her fonksiyon buraya gider. Genellikle istemeden de olsa stack üzerinde birçok hatalarla karşılaşabiliriz. Sıklıkla karşılaştığımız *stack buffer overflow* ve *incorrect memory*’ye erişmeye çalışmak bu hatalardan bazılarıdır.
+
+▶︎ Öncelikle stack bir LIFO (Last In First Out) data structures’dır. Somutlaştırmak adına LIFO’yu şöyle düşünebiliriz:
+
+İçine kitapların yalnızca üst üste yerleşebildiği kapağı açık boş bir kutu düşünün. Örnek olarak, kutuya üst üste 5 kitap koydunuz. Kutudan çıkaracağınız ilk kitap 5. koyduğunuz kitap olacaktır. Yani son giren 5. kitap ilk çıkacak kitaptır. LIFO dediğimiz olay da tam olarak budur. Aşağıdaki görselle de bunu somutlaştırabilirsiniz.
+
+![Untitled](https://github.com/facetint/get_next_line/assets/99668549/39a2d15c-9809-427e-b7a8-ac2449a6acdd)
+
+Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
+
+**Push & Pop**
+
+Bu iki işlem birbirlerinin tam olarak tersidir. Push, programdan gelen bir değeri stack’in üzerine eklerken, pop is en yüksek değeri stack’ten çıkarır, boşaltır.
+
+<img width="977" alt="Ekran Resmi 2023-11-23 17 06 25" src="https://github.com/facetint/get_next_line/assets/99668549/5a18b55c-6a78-4d66-9ec8-d116763c6d96">
+
+▶︎ Yukarıdaki gibi bir pop-push operasyonunda, belleğe girip çıkacak değerlerin takibini yapabilmek için Stack Pointer adı verilen özel bir işlemci register’ı vardır. Geliştiriciler, lokal bir değişken veya fonksiyonun dönüş adresi gibi belleğe sürekli bişeyler kaydetmeye çalışır. Bu senaryoda stack bir değeri pushlar ve pointer ı yukarı taşır. Program fonksiyondan her çıktığında ya da tanımlanan değişkenler kaybolduğunda, stack memory bu değerleri pop eder. Böylece belleğin daha verimli kullanılmasını sağlar.
+
+
+## HEAP
+
+▶︎ Heap Memory, bellek üzerinde yer tahsisi yapılan belli bir bölümdür. 
+
+▶︎ Bu yer, bellek üzerinde “malloc” fonksiyonu aracılığıyla tahsis edilir ve heap üzerinde allocate edilen(yer tahsisi yapılan) bellek “free” lenerek tekrar kullanım için serbest bırakılır.
+
+▶︎ Heap’teki bellek kullanımı compiler tarafından değil, geliştiriciler tarafından kontrol edilir. Karmaşık programlar oluştururken, genellikle büyük bir bellek alanına ihtiyaç duyarız. Bu durumda Heap Memory kullanırız.
+
+▶︎ Heap üzerinde allocate ettiğimiz bellek operasyonuna “dynamic memory allocation” adı verilir.
+  
 ## STACK - HEAP FARKLARI
 | STACK | HEAP|
 | :--- | :--- |
