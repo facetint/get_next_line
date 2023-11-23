@@ -147,12 +147,12 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 | Uygulama | Kolay. | Daha zor. |
 | Erişim süresi | Ulaşılması daha hızlıdır. | Daha zordur. |
 | Ana Konu | Bellek yetersizliği | Bellek parçalanması |
-| Referans yeri | Harika Çalışma zamanında oluşturulur. |
-| Güvenlik | Kullanacağınız yerin boyutunu tam olarak biliyorsanız Stack‘i kullanmak sizin için uygun olacaktır. | İhtiyacınız olan boyutu tam olarak bilmiyorsanız Heap kullanımı daha iyi olacaktır. |
-| Esneklik | Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
-| Veri türü yapısı | Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
-| Tercih Edilen | Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
-| Boyut | Derleme zamanında oluşturulur. | Çalışma zamanında oluşturulur. |
+| Referans yeri | Harika | Yeterli. |
+| Güvenlik | depolanan verilere yalnızca sahibi tarafından erişilebilir | İş parçacığı güvenli değil, depolanan veriler tüm iş parçacıkları tarafından görülebilir |
+| Esneklik | Sabit boyut. | Yeniden boyutlandırma mümkündür. |
+| Veri türü yapısı | Doğrusal | Hiyerarşik. |
+| Tercih Edilen | Bir dizide statik bellek tahsisi tercih edilir. | Bağlı listede Heap bellek tahsisi tercih edilir. |
+| Boyut | Heap den küçüktür. | Daha büyüktür. |
 
 
 
