@@ -140,7 +140,7 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
   
 ## STACK - HEAP FARKLARI
 | PARAMETRE | STACK | HEAP|
-| :--- | :--- |
+| :--- | :--- | :--- |
 | Temel | | Bellek bitişik bir blok halinde tahsis edilir. | | Bellek herhangi bir rastgele sırayla tahsis edilir. |
 | Bellek Tahsisi | | Derleyici tarafından otomatik olarak yapılır.| | Programcı tarafından yapılır. |
 | Maliyet | | az | | daha fazla |
