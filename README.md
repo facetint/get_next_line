@@ -161,7 +161,11 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 ## STACK - HEAP FARKLARI
 
 
+<div align="center">
+
 ![image](https://github.com/user-attachments/assets/6db6f67d-17c8-48c0-b73d-e215fec3fdc3)
+
+ </div>
 
 
 | PARAMETRE | STACK | HEAP |
