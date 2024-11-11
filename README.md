@@ -58,7 +58,7 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 ## TERİMLER 🌟
 
 
- ### Buffer Size 
+ ### Buffer Size  
 
  "Buffer size" (tampon boyutu), bir veri depolama alanının, genellikle bayt veya karakterlerin sayısı olarak ifade edilen, içerdiği verinin miktarını belirtir. Bu tamponlar, veri akışını veya veriyi okuma ve yazma işlemlerini daha verimli hale getirmek için kullanılır.Bu, özellikle dosya okuma, ağ iletişimi veya veri analizi gibi senaryolarda önemlidir.
 
@@ -78,7 +78,7 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 
 **ssize_t :**  POSIX standardına (Portable Operating System Interface for Unix) dayalı işletim sistemlerinde kullanılan bir tamsayı (integer) veri türüdür. Bu veri türü, özellikle dosya işleme işlemleri sırasında kullanılır ve işlem sonuçlarını temsil etmek için tasarlanmıştır.
 
-**`ssize_t`** **veri türünün temel özellikleri:**
+## `ssize_t` veri türünün temel özellikleri:  🌟  🌟
 
  - **Negatif ve Pozitif Değerler:** **`ssize_t`**, hem negatif hem de pozitif tam sayı değerlerini temsil edebilir. Başarılı işlemlerde, pozitif değerler dönerken, hata durumlarında genellikle -1 gibi negatif değerler döner.
  
@@ -88,13 +88,13 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
  
  - **Taşma ve Bellek Verimliliği:** **`ssize_t`**, işlemler sırasında büyük veri miktarlarını temsil edebilir ve taşma sorunlarına karşı koruma sağlar. Aynı zamanda veri işleme sırasında bellek verimliliğini artırır.
 
- **size_t ile farkı :   `size_t` işaretsiz bir veri türüdür,(unsigned) yani negatif değerleri temsil etmez. Bu nedenle `size_t`'yi negatif değerlerle karşılaştırmak veya negatif değerlerle kullanmak hatalıdır. `ssize_t` ise işaretli bir veri türüdür (signed) ve hem pozitif hem de negatif değerleri temsil edebilir.**
+ ‼️ **size_t ile farkı :  ‼️  `size_t` işaretsiz bir veri türüdür,(unsigned) yani negatif değerleri temsil etmez. Bu nedenle `size_t`'yi negatif değerlerle karşılaştırmak veya negatif değerlerle kullanmak hatalıdır. `ssize_t` ise işaretli bir veri türüdür (signed) ve hem pozitif hem de negatif değerleri temsil edebilir.**
  
  - **`size_t`**: **`size_t`**, özellikle bellek tahsis etme (malloc, calloc vb.) ve bellek boyutlarını temsil etme işlemleri için kullanılır. Pozitif tamsayı değerlerini temsil eder ve genellikle bellek ile ilgili işlemlerde boyutları ifade etmek için kullanılır. Bu tür, dizilerin veya bellek bloklarının boyutlarını ve indislerini saklamak için idealdir.
  
  - **`ssize_t`**: **`ssize_t`**, dosya okuma ve yazma işlemlerinin sonuçlarını temsil etmek için kullanılır. Hem pozitif hem de negatif tamsayı değerlerini temsil edebilir ve genellikle dosya işleme işlemlerinin sonuçlarını saklamak için kullanılır. Bu tür, **`read`** ve **`write`** işlemleri gibi dosya işleme işlemlerinin sonuçlarını döndürmek için idealdir.
 
-## BELLEK YÖNETİMİ
+## BELLEK YÖNETİMİ  🧐
 
 ### STACK - HEAP
 
@@ -125,7 +125,7 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
  ▶︎ Yukarıdaki gibi bir pop-push operasyonunda, belleğe girip çıkacak değerlerin takibini yapabilmek için Stack Pointer adı verilen özel bir işlemci register’ı vardır. Geliştiriciler, lokal bir değişken veya fonksiyonun dönüş adresi gibi belleğe sürekli bişeyler kaydetmeye çalışır. Bu senaryoda stack bir değeri pushlar ve pointer ı yukarı taşır. Program fonksiyondan her çıktığında ya da tanımlanan değişkenler kaybolduğunda, stack memory bu değerleri pop eder. Böylece belleğin daha verimli kullanılmasını sağlar.
 
 
-## HEAP
+## HEAP 
 
  ▶︎ Heap Memory, bellek üzerinde yer tahsisi yapılan belli bir bölümdür. 
  
@@ -136,7 +136,7 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
  ▶︎ Heap üzerinde allocate ettiğimiz bellek operasyonuna “dynamic memory allocation” adı verilir.
 
 
-### HEAP BELLEK AVANTAJLARI
+### HEAP BELLEK AVANTAJLARI  ✨
 
   ▶︎  Heap'in bellek boyutunda herhangi bir sınırı yoktur.
   
@@ -147,7 +147,7 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
   ▶︎  Öncelik Kuyruğunda da yığın yöntemi kullanılır.
 
 
-### HEAP BELLEK DEZAVANTAJLARI
+### HEAP BELLEK DEZAVANTAJLARI  🌪
 
  ▶︎  Stack ile karşılaştırıldığında yürütülmesi çok fazla zaman alır.
  
