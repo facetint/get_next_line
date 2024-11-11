@@ -157,8 +157,12 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
  
  ▶︎  Heap belleğinde bellek yönetimi küresel olarak kullanıldığından daha karmaşıktır.
 
-  
+ 
 ## STACK - HEAP FARKLARI
+
+
+![image](https://github.com/user-attachments/assets/6db6f67d-17c8-48c0-b73d-e215fec3fdc3)
+
 
 | PARAMETRE | STACK | HEAP |
 | :--- | :--- | :--- |
