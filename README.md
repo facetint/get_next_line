@@ -26,9 +26,9 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 
  **Satır Okuma:** Bir dosyadan veya dosya tanımlayıcısından okunan veriyi satır bazında ayırır. Her çağrıda bir satır okunur.
  
- **Bellek Yönetimi:** ** `get_next_line`**, bellek yönetimini otomatik olarak halleder. Bellek tahsisi yapar ve gereksiz belleği serbest bırakır.
+ **Bellek Yönetimi:**  `get_next_line`, bellek yönetimini otomatik olarak halleder. Bellek tahsisi yapar ve gereksiz belleği serbest bırakır.
  
- **Tekrarlanabilirlik:** ** `get_next_line`**, çağrıldığında bir sonraki satırı okur. Bu sayede bir dosyayı veya veri akışını sırayla işlemek için döngülerde kullanılabilir.
+ **Tekrarlanabilirlik:**  `get_next_line`, çağrıldığında bir sonraki satırı okur. Bu sayede bir dosyayı veya veri akışını sırayla işlemek için döngülerde kullanılabilir.
  
  **Hata Kontrolü:** Dosya sonu veya hata durumları kontrol edilir ve uygun şekilde işlenir.
 
