@@ -24,36 +24,39 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 
 # AMAÇ
 
- **Satır Okuma:** Bir dosyadan veya dosya tanımlayıcısından okunan veriyi satır bazında ayırır. Her çağrıda bir satır okunur.
- 
- **Bellek Yönetimi:**  `get_next_line`, bellek yönetimini otomatik olarak halleder. Bellek tahsisi yapar ve gereksiz belleği serbest bırakır.
- 
- **Tekrarlanabilirlik:**  `get_next_line`, çağrıldığında bir sonraki satırı okur. Bu sayede bir dosyayı veya veri akışını sırayla işlemek için döngülerde kullanılabilir.
- 
- **Hata Kontrolü:** Dosya sonu veya hata durumları kontrol edilir ve uygun şekilde işlenir.
+  - **Satır Okuma:** Bir dosyadan veya dosya tanımlayıcısından okunan veriyi satır bazında ayırır. Her çağrıda bir satır okunur.
+  
+  - **Bellek Yönetimi:**  `get_next_line`, bellek yönetimini otomatik olarak halleder. Bellek tahsisi yapar ve gereksiz belleği serbest bırakır.
+  
+ -  **Tekrarlanabilirlik:**  `get_next_line`, çağrıldığında bir sonraki satırı okur. Bu sayede bir dosyayı veya veri akışını sırayla işlemek için döngülerde kullanılabilir.
+  
+ -  **Hata Kontrolü:** Dosya sonu veya hata durumları kontrol edilir ve uygun şekilde işlenir.
+
 
 🟥 `get_next_line` fonksiyonu, özellikle büyük veri dosyalarını satır satır okuma veya metin tabanlı protokollerle iletişim kurma gibi senaryolarda oldukça kullanışlıdır. Bu fonksiyon, kullanıcıya belirtilen dosya veya dosya tanımlayıcısından bir satır okuma yeteneği sunar ve bellek sızıntılarına karşı korur.
 
 
 ## KULLANIM ALANLARI
 
-1. **Dosya Okuma Uygulamaları:** Metin dosyalarını satır satır okumak veya işlemek için kullanılır. Örneğin, bir metin belgesi içeriğini işlemek veya bir konfigürasyon dosyasını okumak için kullanılabilir.
+ 1. **Dosya Okuma Uygulamaları:** Metin dosyalarını satır satır okumak veya işlemek için kullanılır. Örneğin, bir metin belgesi içeriğini işlemek veya bir konfigürasyon dosyasını okumak için kullanılabilir.
+ 
+ 2. **Veri Tabanı Yedekleme:** Büyük veri tabanlarını yedeklemek veya verileri başka bir biçime dönüştürmek için kullanılabilir. Verileri satır satır işlemek, büyük veri tabanlarının bellek sınırlarını aşmadan işlemeyi sağlar.
+ 
+ 3. **Ağ İşlemleri:** Ağ protokollerini uygularken, gelen verileri satır satır okumak ve işlemek için kullanılabilir. Örneğin, bir HTTP sunucusundan gelen istekleri veya bir POP3 e-posta sunucusundan gelen e-posta mesajlarını işlemek için kullanılabilir.
+ 
+ 4. **Log Dosyaları:** Log dosyalarını okumak ve log verilerini analiz etmek için kullanılabilir. Her satırı ayrı bir log girişi olarak ele alabilirsiniz.
+ 
+ 5. **Veri Analizi:** Büyük veri setlerini analiz etmek için kullanılabilir. Her satırı işleyerek veri analizi işlemleri gerçekleştirilebilir.
+ 
+ 6. **Komut İşleme:** Bir komut satırı uygulamasının girdisini satır satır işlemek için kullanılabilir. Örneğin, kullanıcı tarafından girilen komutları işlemek ve yanıtlamak için kullanılabilir.
+ 
+ 7. **Metin Tabanlı Oyunlar:** Metin tabanlı oyunlarda olayları veya komutları işlemek için kullanılabilir. Her oyuncu hareketini veya eylemi bir satır olarak girer ve oyun bu girdilere yanıt verir.
 
-2. **Veri Tabanı Yedekleme:** Büyük veri tabanlarını yedeklemek veya verileri başka bir biçime dönüştürmek için kullanılabilir. Verileri satır satır işlemek, büyük veri tabanlarının bellek sınırlarını aşmadan işlemeyi sağlar.
-
-3. **Ağ İşlemleri:** Ağ protokollerini uygularken, gelen verileri satır satır okumak ve işlemek için kullanılabilir. Örneğin, bir HTTP sunucusundan gelen istekleri veya bir POP3 e-posta sunucusundan gelen e-posta mesajlarını işlemek için kullanılabilir.
-
-4. **Log Dosyaları:** Log dosyalarını okumak ve log verilerini analiz etmek için kullanılabilir. Her satırı ayrı bir log girişi olarak ele alabilirsiniz.
-
-5. **Veri Analizi:** Büyük veri setlerini analiz etmek için kullanılabilir. Her satırı işleyerek veri analizi işlemleri gerçekleştirilebilir.
-
-6. **Komut İşleme:** Bir komut satırı uygulamasının girdisini satır satır işlemek için kullanılabilir. Örneğin, kullanıcı tarafından girilen komutları işlemek ve yanıtlamak için kullanılabilir.
-
-7. **Metin Tabanlı Oyunlar:** Metin tabanlı oyunlarda olayları veya komutları işlemek için kullanılabilir. Her oyuncu hareketini veya eylemi bir satır olarak girer ve oyun bu girdilere yanıt verir.
 
 🟥 **`get_next_line`** fonksiyonu, veri akışını veya dosyayı okurken bellek verimliliği ve işlem hızı önemli olduğunda kullanışlıdır. Veriyi satır satır işlemek, büyük veri kümeleriyle çalışırken bellek sınırlarını aşmamak ve işlem hızını artırmak için etkili bir yöntemdir.
 
-## TERİMLER
+## TERİMLER 🌟
+
 
  ### Buffer Size 
 
