@@ -170,18 +170,18 @@ Bu yapıyı kullanan bellek, iki basit işlem ile süreci yönetmektedir.
 
 | PARAMETRE | STACK | HEAP |
 | :--- | :--- | :--- |
-| Temel | Bellek bitişik bir blok halinde tahsis edilir. | Bellek herhangi bir rastgele sırayla tahsis edilir. |
-| Bellek Tahsisi | Derleyici tarafından otomatik olarak yapılır.| Programcı tarafından yapılır. |
-| Maliyet | Az | Daha fazla |
-| Uygulama | Kolay. | Daha zor. |
-| Erişim süresi | Ulaşılması daha hızlıdır. | Daha zordur. |
-| Ana Konu | Bellek yetersizliği | Bellek parçalanması |
-| Referans yeri | Harika | Yeterli. |
-| Güvenlik | depolanan verilere yalnızca sahibi tarafından erişilebilir | İş parçacığı güvenli değil, depolanan veriler tüm iş parçacıkları tarafından görülebilir |
-| Esneklik | Sabit boyut. | Yeniden boyutlandırma mümkündür. |
-| Veri türü yapısı | Doğrusal | Hiyerarşik. |
-| Tercih Edilen | Bir dizide statik bellek tahsisi tercih edilir. | Bağlı listede Heap bellek tahsisi tercih edilir. |
-| Boyut | Heap den küçüktür. | Daha büyüktür. |
+| **Temel** | Bellek bitişik bir blok halinde tahsis edilir. | Bellek herhangi bir rastgele sırayla tahsis edilir. |
+| **Bellek Tahsisi** | Derleyici tarafından otomatik olarak yapılır.| Programcı tarafından yapılır. |
+| **Maliyet** | Az | Daha fazla |
+| **Uygulama** | Kolay. | Daha zor. |
+| **Erişim süresi** | Ulaşılması daha hızlıdır. | Daha zordur. |
+| **Ana Konu** | Bellek yetersizliği | Bellek parçalanması |
+| **Referans yeri** | Harika | Yeterli. |
+| **Güvenlik** | depolanan verilere yalnızca sahibi tarafından erişilebilir | İş parçacığı güvenli değil, depolanan veriler tüm iş parçacıkları tarafından görülebilir |
+| **Esneklik** | Sabit boyut. | Yeniden boyutlandırma mümkündür. |
+| **Veri türü yapısı** | Doğrusal | Hiyerarşik. |
+| **Tercih Edilen** | Bir dizide statik bellek tahsisi tercih edilir. | Bağlı listede Heap bellek tahsisi tercih edilir. |
+| **Boyut** | Heap den küçüktür. | Daha büyüktür. |
 
 
 
