@@ -55,11 +55,11 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 
 ## TERİMLER
 
- ###Buffer Size 
+ ### Buffer Size 
 
  "Buffer size" (tampon boyutu), bir veri depolama alanının, genellikle bayt veya karakterlerin sayısı olarak ifade edilen, içerdiği verinin miktarını belirtir. Bu tamponlar, veri akışını veya veriyi okuma ve yazma işlemlerini daha verimli hale getirmek için kullanılır.Bu, özellikle dosya okuma, ağ iletişimi veya veri analizi gibi senaryolarda önemlidir.
 
-###Read Fonksiyonu
+### Read Fonksiyonu
 
  C programlama dilinde ve Unix benzeri işletim sistemlerinde kullanılan bir sistem çağrısıdır. Bu fonksiyon, dosya veya dosya tanımlayıcısından veri okumak için kullanılır.
 
