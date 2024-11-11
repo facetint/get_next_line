@@ -4,6 +4,22 @@
 
  </div>
 
+
+# Table of Contents 
+
+- [Proje Hakkında](#proje-hakkında)
+- [Amaç](#amaç)
+- [Kullanım Alanları](#kullanım-alanları)
+- [Terimler](#terimler)
+  - [Buffer Size](#buffer-size)
+  - [Read Fonksiyonu](#read-fonksiyonu)
+- [Bellek Yönetimi](#bellek-yönetimi)
+  - [Stack ve Heap](#stack-ve-heap)
+    - [Stack](#stack)
+    - [Push & Pop](#push--pop)
+    - [Heap](#heap)
+
+
 Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla satırlar okumaktır.  Bu fonksiyon, özellikle metin dosyalarını satır satır işlemek veya girdi akışından veriyi satır bazında okumak için kullanılır. get_next_line fonksiyonu, veriyi okurken belleği etkin bir şekilde yönetmek için dinamik bellek tahsisi kullanır.
 
 # AMAÇ
