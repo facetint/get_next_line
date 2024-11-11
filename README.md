@@ -36,7 +36,8 @@ Bu proje, bir dosya veya dosya tanımlayıcısından (file descriptor) sırayla 
 🟥 `get_next_line` fonksiyonu, özellikle büyük veri dosyalarını satır satır okuma veya metin tabanlı protokollerle iletişim kurma gibi senaryolarda oldukça kullanışlıdır. Bu fonksiyon, kullanıcıya belirtilen dosya veya dosya tanımlayıcısından bir satır okuma yeteneği sunar ve bellek sızıntılarına karşı korur.
 
 
-## KULLANIM ALANLARI
+## KULLANIM ALANLARI  📌
+
 
  1. **Dosya Okuma Uygulamaları:** Metin dosyalarını satır satır okumak veya işlemek için kullanılır. Örneğin, bir metin belgesi içeriğini işlemek veya bir konfigürasyon dosyasını okumak için kullanılabilir.
  
